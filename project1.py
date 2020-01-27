@@ -9,7 +9,7 @@ def index():
        Rate = float(request.form['Rate'])
        time = float(request.form['time'])
        Rate=Rate/1200
-       time= time*12
+       time= time*14
        EMI = round((principle * Rate * (1 + Rate) ** time )/ ((1 + Rate) ** time - 1), 5)
 
        return render_template('calculator.html',principle=principle, Rate=Rate, time=time, EMI=EMI)
